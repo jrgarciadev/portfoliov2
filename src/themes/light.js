@@ -4,7 +4,7 @@ const lightTheme = {
   ...common,
   bg: {
     default: '#FEFEFE',
-    reverse: '#061B1F',
+    reverse: '#181818',
   },
   text: {
     default: '#181818',
