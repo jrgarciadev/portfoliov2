@@ -2,7 +2,7 @@
 import { ThemeProvider } from 'styled-components';
 import DefaultLayout from '@layouts/default';
 import GlobalStyles from '@styles/globals';
-import theme from '@themes/light';
+import theme from '@themes/dark';
 
 export default function App({ Component, pageProps }) {
   const Layout = Component.Layout || DefaultLayout;

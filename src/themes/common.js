@@ -7,17 +7,9 @@ export default {
     fontMono: 'Space Mono, SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
   },
   brand: {
-    primary: '#3378F7',
-    primaryLight: '#5F99FC',
-    secondary: '#7DDEFB',
-    accent: '#E2E3E3',
-    danger: '#ff4d4f',
-    warning: '#ffc312',
-    success: '#0be881',
-    gradient: {
-      light: '#5F99FC',
-      dark: '#357AF7',
-    },
+    primary: '#00D8FD',
+    secondary: '#3E5FA8',
+    accent: '#5FC921',
   },
   fontSize: {
     xxs: '0.9rem',

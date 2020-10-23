@@ -3,12 +3,12 @@ import common from './common';
 const lightTheme = {
   ...common,
   bg: {
-    default: '#FEFEFE',
-    reverse: '#061B1F',
+    default: '#061B1F',
+    reverse: '#FEFEFE',
   },
   text: {
-    default: '#181818',
-    reverse: '#FFFFFF',
+    default: '#FEFEFE',
+    reverse: '#061B1F',
   },
   shadows: {
     small: '0 5px 10px rgba(0, 0, 0, 0.12)',
