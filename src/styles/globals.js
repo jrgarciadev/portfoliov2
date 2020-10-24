@@ -1,8 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import Fonts from './fonts';
+import { TransitionStyles } from './transitions';
 
 export default createGlobalStyle`
-${Fonts}
   /*
   -------------------------------------------------------------------------------
   1.  Base styles
@@ -86,4 +85,5 @@ ${Fonts}
   ul {
     list-style: none
   }
+  ${TransitionStyles};
 `;

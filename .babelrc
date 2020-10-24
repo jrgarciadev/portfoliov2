@@ -22,7 +22,8 @@
           "@themes": "./src/themes",
           "@utils": "./src/utils",
           "@layouts": "./src/layouts",
-          "@fonts": "./src/fonts"
+          "@fonts": "./src/fonts",
+          "@config": "./src/config.js"
         }
       }
     ]

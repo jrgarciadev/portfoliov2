@@ -5,6 +5,7 @@ import { Loader } from '@components';
 import { SkipToContentLink } from './styles';
 import Main from './main';
 import BaseLayout from './base';
+import Navbar from './navbar';
 
 const DefaultLayout = ({ children }) => {
   const router = useRouter();
@@ -35,7 +36,10 @@ const DefaultLayout = ({ children }) => {
         {isLoading && isHome ? (
           <Loader onFinish={() => setIsLoading(false)} />
         ) : (
-          <Main id="content">{children}</Main>
+          <>
+            <Navbar isHome={isHome} />
+            <Main id="content">{children}</Main>
+          </>
         )}
       </>
     </BaseLayout>

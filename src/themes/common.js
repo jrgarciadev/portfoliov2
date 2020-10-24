@@ -25,7 +25,7 @@ export default {
     xs: '320px',
     sm: '576px',
     md: '768px',
-    lg: '992px',
+    lg: '1080px',
     xl: '1200px',
   },
   fontw: {
@@ -35,6 +35,7 @@ export default {
     bold: 700,
   },
   transitions: {
+    easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
     default: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',
   },
   mixins,

@@ -14,6 +14,14 @@ const BaseLayout = ({ children }) => {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#181818" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="viewport"
           key="viewport"
