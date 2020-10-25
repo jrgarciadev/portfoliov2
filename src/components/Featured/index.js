@@ -1,4 +1,4 @@
-import { Icon } from '@components/icons';
+import { Icon } from '@components/Icons';
 import { NumberedHeading } from '@common/styles';
 import { featuredProjects } from '@config';
 import {
