@@ -192,7 +192,7 @@ export const StyledProject = styled.div`
     z-index: 2;
     padding: 25px;
     border-radius: ${({ theme }) => theme.borderRadius};
-    background-color: ${({ theme }) => theme.bg.default};
+    background-color: ${({ theme }) => theme.bg.defaultLight};
     color: ${({ theme }) => theme.text.accent};
     font-size: ${({ theme }) => theme.fontSize.md};
 
