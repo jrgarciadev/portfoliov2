@@ -2,8 +2,41 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.main`
   display: flex;
+  align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 200px 150px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding: 200px 100px;
+  }
+   
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    padding: 150px 50px;
+  }
+   
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: 125px 25px;
+  }
+
+  &.fillHeight {
+    padding: 0 200px;
+
+    @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+      padding: 0 100px;
+    }
+    @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+      padding: 0 50px;
+    }
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      padding: 0 25px;
+    }
+  }
+  }
 `;
 
 export const SkipToContentLink = styled.a`

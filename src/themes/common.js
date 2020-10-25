@@ -19,7 +19,6 @@ export default {
     lg: '1.8rem',
     xl: '2.2rem',
     xxl: '2.6rem',
-    heading: '4rem',
   },
   breakpoints: {
     xs: '320px',

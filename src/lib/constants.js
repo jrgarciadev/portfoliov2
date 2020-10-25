@@ -1,5 +1,6 @@
-export const NAV_SCROLL_HEIGHT = 70;
+export const NAV_SCROLL_HEIGHT = 120;
 export const NAV_HEIGHT = 100;
+export const NAV_DELAY = 1000;
 export const LOADER_DELAY = 2000;
 export const KEY_CODES = {
   ARROW_LEFT: 'ArrowLeft',

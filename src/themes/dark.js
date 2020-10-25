@@ -4,11 +4,12 @@ const lightTheme = {
   ...common,
   bg: {
     default: '#181818',
-    reverse: '#FEFEFE',
+    reverse: '#F4F4F4',
   },
   text: {
-    default: '#FEFEFE',
+    default: '#F4F4F4',
     reverse: '#181818',
+    accent: '#a3a8c3',
   },
   shadows: {
     default: '0 10px 30px -10px rgba(2, 12, 27, 0.7)',

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { Loader } from '@components';
+import { Loader, Social, Email } from '@components';
 import { SkipToContentLink } from './styles';
 import Main from './main';
 import BaseLayout from './base';
@@ -29,16 +29,22 @@ const DefaultLayout = ({ children }) => {
     }
   }, [isLoading]);
 
+  const handleFinish = () => setIsLoading(false);
+
   return (
     <BaseLayout>
       <>
         <SkipToContentLink href="#content">Skip to Content</SkipToContentLink>
         {isLoading && isHome ? (
-          <Loader onFinish={() => setIsLoading(false)} />
+          <Loader onFinish={handleFinish} />
         ) : (
           <>
             <Navbar isHome={isHome} />
-            <Main id="content">{children}</Main>
+            <Social isHome={isHome} />
+            <Email isHome={isHome} />
+            <Main id="content" className={isHome ? 'fillHeight' : ''}>
+              {children}
+            </Main>
           </>
         )}
       </>

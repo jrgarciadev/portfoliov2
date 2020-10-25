@@ -1,5 +1,48 @@
+/* eslint-disable max-len */
 module.exports = {
   email: 'jrgarciadev@gmail.com',
+
+  featuredProjects: [
+    {
+      title: 'Realtime TODO',
+      cover: 'https://jrgarciadev.s3.amazonaws.com/todo_list.png',
+      external: 'https://nextjs-todo-list.vercel.app/',
+      github: 'https://github.com/jrgarciadev/nextjs-todo-list',
+      descriptionHtml:
+        "Web application to add, edit, delete and assign to another person in <b>real-time</b>. I did it in participation to a code challenge mmade by the well-known Developer and Youtuber Nicolas Schürmann on his channel <a target='_blank' href='https://www.youtube.com/channel/UC4FHiPgS1KXkUMx3dxBUtPg'>Hola Mundo</a>. <br> My participation came out in one of his videos Minute: 29:35 -> <a target='_blank' href='https://www.youtube.com/watch?v=fyjNpvtzVhk'>Video</a>",
+      techs: ['Next.js', 'MaterialUI', 'Firebase'],
+    },
+    {
+      title: 'Ecomerciar Web',
+      cover: 'https://jrgarciadev.s3.amazonaws.com/ecomerciar_site.png',
+      external: 'https://nextjs-todo-list.vercel.app/',
+      github: 'https://github.com/jrgarciadev/nextjs-todo-list',
+      descriptionHtml:
+        "Web application to add, edit, delete and assign to another person in <b>real-time</b>. I did it in participation to a code challenge mmade by the well-known Developer and Youtuber Nicolas Schürmann on his channel <a target='_blank' href='https://www.youtube.com/channel/UC4FHiPgS1KXkUMx3dxBUtPg'>Hola Mundo</a>. <br> My participation came out in one of his videos Minute: 29:35 -> <a target='_blank' href='https://www.youtube.com/watch?v=fyjNpvtzVhk'>Video</a>",
+      techs: ['Next.js', 'MaterialUI', 'Firebase'],
+    },
+    {
+      title: 'Ecomerciar Web',
+      cover: 'https://jrgarciadev.s3.amazonaws.com/ecomerciar_site.png',
+      external: 'https://nextjs-todo-list.vercel.app/',
+      github: 'https://github.com/jrgarciadev/nextjs-todo-list',
+      descriptionHtml:
+        "Web application to add, edit, delete and assign to another person in <b>real-time</b>. I did it in participation to a code challenge mmade by the well-known Developer and Youtuber Nicolas Schürmann on his channel <a target='_blank' href='https://www.youtube.com/channel/UC4FHiPgS1KXkUMx3dxBUtPg'>Hola Mundo</a>. <br> My participation came out in one of his videos Minute: 29:35 -> <a target='_blank' href='https://www.youtube.com/watch?v=fyjNpvtzVhk'>Video</a>",
+      techs: ['Next.js', 'MaterialUI', 'Firebase'],
+    },
+  ],
+
+  skills: [
+    'JavaScript (ES6+)',
+    'React Native',
+    'Android',
+    'React',
+    'Next.js',
+    'Vue.js',
+    'Node.js',
+    'Laravel',
+    'GraphQL',
+  ],
 
   socialMedia: [
     {
@@ -44,20 +87,4 @@ module.exports = {
     navy: '#0a192f',
     darkNavy: '#020c1b',
   },
-
-  srConfig: (delay = 200, viewFactor = 0.25) => ({
-    origin: 'bottom',
-    distance: '20px',
-    duration: 500,
-    delay,
-    rotate: { x: 0, y: 0, z: 0 },
-    opacity: 0,
-    scale: 1,
-    easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-    mobile: true,
-    reset: false,
-    useDelay: 'always',
-    viewFactor,
-    viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-  }),
 };

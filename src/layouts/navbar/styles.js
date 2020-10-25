@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { NAV_SCROLL_HEIGHT, NAV_HEIGHT } from '@lib/constants';
+import { hexa } from '@utils';
 
 export const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -14,16 +15,16 @@ export const StyledHeader = styled.header`
   pointer-events: auto !important;
   user-select: auto !important;
   backdrop-filter: blur(10px);
-  transition: ${(props) => props.theme.transitions.default}
-    ${(props) =>
-      props.scrollDirection === 'up' &&
-      !props.scrolledToTop &&
-      css`
-        height: ${NAV_SCROLL_HEIGHT}px;
-        transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
-        box-shadow: ${props.theme.shadows.default};
-      `};
+  transition: ${(props) => props.theme.transitions.default};
+  ${(props) =>
+    props.scrollDirection === 'up' &&
+    !props.scrolledToTop &&
+    css`
+      height: ${NAV_SCROLL_HEIGHT}px;
+      transform: translateY(0px);
+      background-color: ${hexa(props.theme.bg.default, 0.5)};
+      box-shadow: ${props.theme.shadows.default};
+    `};
 
   ${(props) =>
     props.scrollDirection === 'down' &&
