@@ -1,5 +1,3 @@
-import React from 'react';
-
 const IconFork = () => (
   <svg aria-label="forks" viewBox="0 0 10 16" version="1.1" width="10" height="16" role="img">
     <path

@@ -1,5 +1,4 @@
 import { Icon } from '@components/icons';
-import Fade from 'react-reveal/Fade';
 import { NumberedHeading } from '@common/styles';
 import { featuredProjects } from '@config';
 import {
@@ -12,9 +11,7 @@ import {
 const Featured = () => {
   return (
     <section id="projects">
-      <Fade bottom>
-        <NumberedHeading>Some Projects I’ve Built</NumberedHeading>
-      </Fade>
+      <NumberedHeading>Some Projects I’ve Built</NumberedHeading>
 
       <div>
         {featuredProjects &&

@@ -72,7 +72,6 @@ const mixins = {
       }
       & > * {
         color: ${(props) => props.theme.brand.primary} !important;
-        color: var(--green) !important;
         transition: ${(props) => props.theme.transitions.default};
       }
     }

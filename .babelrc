@@ -24,7 +24,7 @@
           "@utils": "./src/utils",
           "@layouts": "./src/layouts",
           "@fonts": "./src/fonts",
-          "@config": "./src/config.js"
+          "@config": "./src/config"
         }
       }
     ]

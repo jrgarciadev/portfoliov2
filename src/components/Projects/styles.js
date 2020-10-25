@@ -6,7 +6,12 @@ export const StyledProjectsSection = styled.section`
   align-items: center;
 
   h2 {
-    font-size: clamp(24px, 5vw, ${(props) => props.theme.fontSize.xs});
+    font-size: clamp(24px, 5vw, ${(props) => props.theme.fontSize.xxl});
+    font-weight: ${(props) => props.theme.fontw.semibold};
+  }
+
+  .inline-link {
+    ${({ theme }) => theme.mixins.inlineLink};
   }
 
   .archive-link {
@@ -30,7 +35,8 @@ export const StyledProjectsSection = styled.section`
   }
 
   .more-button {
-    ${({ theme }) => theme.mixins.button};
+    ${({ theme }) => theme.mixins.bigButton};
+    font-size: ${(props) => props.theme.fontSize.sm};
     margin: 80px auto 0;
   }
 `;
@@ -64,8 +70,8 @@ export const StyledProject = styled.div`
     margin-bottom: 30px;
 
     .folder {
-      color: ${(props) => props.theme.brand.primary};
       svg {
+        fill: ${(props) => props.theme.brand.primary};
         width: 40px;
         height: 40px;
       }
@@ -79,6 +85,7 @@ export const StyledProject = styled.div`
         padding: 5px 10px;
 
         svg {
+          fill: ${(props) => props.theme.text.accent};
           width: 20px;
           height: 20px;
         }
