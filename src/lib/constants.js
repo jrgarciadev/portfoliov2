@@ -1,4 +1,5 @@
 export const NAV_SCROLL_HEIGHT = 120;
+export const NAV_SCROLL_HEIGHT_MOBILE = 70;
 export const NAV_HEIGHT = 100;
 export const NAV_DELAY = 1000;
 export const LOADER_DELAY = 2000;

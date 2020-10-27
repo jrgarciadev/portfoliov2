@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Hero, About, Featured, Projects } from '@components';
 
 const StyledMainContainer = styled.section`
+  width: 100%;
   max-width: 900px;
   counter-reset: section;
   section {

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { NAV_SCROLL_HEIGHT, NAV_HEIGHT } from '@lib/constants';
+import { NAV_SCROLL_HEIGHT, NAV_SCROLL_HEIGHT_MOBILE, NAV_HEIGHT } from '@lib/constants';
 import { hexa } from '@utils';
 
 export const StyledHeader = styled.header`
@@ -24,6 +24,9 @@ export const StyledHeader = styled.header`
       transform: translateY(0px);
       background-color: ${hexa(props.theme.bg.default, 0.5)};
       box-shadow: ${props.theme.shadows.default};
+      @media (max-width: ${props.theme.breakpoints.sm}) {
+        height: ${NAV_SCROLL_HEIGHT_MOBILE}px;
+      }
     `};
 
   ${(props) =>
@@ -33,6 +36,9 @@ export const StyledHeader = styled.header`
       height: ${NAV_SCROLL_HEIGHT};
       transform: translateY(calc(${NAV_SCROLL_HEIGHT}px * -1));
       box-shadow: ${props.theme.shadows.default};
+      @media (max-width: ${props.theme.breakpoints.sm}) {
+        height: ${NAV_SCROLL_HEIGHT_MOBILE}px;
+      }
     `};
 
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {

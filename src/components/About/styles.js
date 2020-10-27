@@ -27,6 +27,10 @@ export const StyledText = styled.div`
     overflow: hidden;
     list-style: none;
 
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+    }
+
     li {
       position: relative;
       margin-bottom: 10px;
