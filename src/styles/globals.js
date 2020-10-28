@@ -76,6 +76,7 @@ export default createGlobalStyle`
   a {
     color: currentColor;
     text-decoration: none;
+    display: inline-block;
   }
 
   a:hover {

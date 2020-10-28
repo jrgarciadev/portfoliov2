@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { hexa } from '@utils';
 
 export const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};

@@ -53,4 +53,24 @@ export const NumberedHeading = styled.h2`
       margin-left: 10px;
     }
   }
+
+  ${({ overline, theme }) =>
+    overline &&
+    `
+    display: block;
+    margin-bottom: 20px;
+    color: ${theme.brand.primary};
+    font-family: ${theme.fontFamily.fontMono};
+    font-size: ${theme.fontSize.md};
+    font-weight: 400;
+
+    &:before {
+      bottom: 0;
+      font-size: ${theme.fontSize.sm};
+    }
+
+    &:after {
+      display: none;
+    }
+  `}
 `;

@@ -118,6 +118,7 @@ export const StyledProject = styled.div`
     list-style: none;
 
     li {
+      color: ${(props) => props.theme.text.accent};
       font-family: ${(props) => props.theme.fontFamily.fontMono};
       font-size: ${(props) => props.theme.fontSize.xs};
       line-height: 1.75;
