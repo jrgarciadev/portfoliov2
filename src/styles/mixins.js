@@ -79,9 +79,9 @@ const mixins = {
       content: '';
       display: block;
       width: 0;
-      height: 1px;
+      height: 2px;
       position: relative;
-      bottom: 0.37em;
+      top: 0.1em;
       background-color: ${(props) => props.theme.brand.primary};
       transition: ${(props) => props.theme.transitions.default};
       opacity: 0.5;

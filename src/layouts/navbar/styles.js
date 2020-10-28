@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { NAV_SCROLL_HEIGHT, NAV_SCROLL_HEIGHT_MOBILE, NAV_HEIGHT } from '@lib/constants';
-import { hexa } from '@utils';
 
 export const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -14,7 +13,6 @@ export const StyledHeader = styled.header`
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
-  backdrop-filter: blur(10px);
   transition: ${(props) => props.theme.transitions.default};
   ${(props) =>
     props.scrollDirection === 'up' &&
@@ -22,7 +20,6 @@ export const StyledHeader = styled.header`
     css`
       height: ${NAV_SCROLL_HEIGHT}px;
       transform: translateY(0px);
-      background-color: ${hexa(props.theme.bg.default, 0.5)};
       box-shadow: ${props.theme.shadows.default};
       @media (max-width: ${props.theme.breakpoints.sm}) {
         height: ${NAV_SCROLL_HEIGHT_MOBILE}px;
@@ -104,9 +101,32 @@ export const StyledLinks = styled.div`
 
       a {
         padding: 10px;
-        &:hover {
+
+        &:hover,
+        &:focus,
+        &:active {
           color: ${(props) => props.theme.brand.primary};
+          outline: 0;
+          &:after {
+            width: 100%;
+          }
+          & > * {
+            color: ${(props) => props.theme.brand.primary} !important;
+            transition: ${(props) => props.theme.transitions.default};
+          }
         }
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          position: relative;
+          top: 0.2em;
+          background-color: ${(props) => props.theme.brand.primary};
+          transition: ${(props) => props.theme.transitions.default};
+          opacity: 0.5;
+        }
+
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;

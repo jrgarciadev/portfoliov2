@@ -6,7 +6,6 @@ const StyledMainContainer = styled.section`
   max-width: 900px;
   counter-reset: section;
   section {
-    backdrop-filter: blur(1px);
     margin: 0 auto;
     padding: 100px 0;
   }
