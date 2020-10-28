@@ -1,4 +1,5 @@
 import { NumberedHeading } from '@common/styles';
+import Image from 'next/image';
 import { skills } from '@config';
 import { StyledAboutSection, StyledText, StyledPic } from './styles';
 
@@ -26,7 +27,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <img src="/avatar.png" alt="Avatar" className="img" />
+            <Image width={300} height={300} src="/avatar.png" alt="Avatar" className="img" />
           </div>
         </StyledPic>
       </div>

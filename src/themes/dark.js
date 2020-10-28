@@ -3,13 +3,13 @@ import common from './common';
 const lightTheme = {
   ...common,
   bg: {
-    default: '#181818',
+    default: '#0A1A2F',
     defaultLight: '#112536',
     reverse: '#F4F4F4',
   },
   text: {
     default: '#F4F4F4',
-    reverse: '#181818',
+    reverse: '#0A1A2F',
     accent: '#a3a8c3',
   },
   shadows: {

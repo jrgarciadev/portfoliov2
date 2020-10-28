@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { hexa } from '@utils';
 import { TransitionStyles } from './transitions';
 
 export default createGlobalStyle`
