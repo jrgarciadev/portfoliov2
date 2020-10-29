@@ -2,6 +2,7 @@ import mixins from '@styles/mixins';
 
 export default {
   borderRadius: '0.375rem',
+  borderRadiusButton: '2.375rem',
   fontFamily: {
     fontSans: 'Open Sans, -apple-system, BlinkMacSystemFont,Segoe UI, Helvetica, Arial',
     fontMono: 'Space Mono, SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',

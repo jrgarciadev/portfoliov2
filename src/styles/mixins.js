@@ -92,9 +92,9 @@ const mixins = {
   smallButton: css`
     color: ${(props) => props.theme.brand.primary};
     background-color: transparent;
-    border: 1px solid ${(props) => props.theme.brand.primary};
-    border-radius: ${(props) => props.theme.borderRadius};
-    padding: 0.75rem 1rem;
+    border: 2px solid ${(props) => props.theme.brand.primary};
+    border-radius: ${(props) => props.theme.borderRadiusButton};
+    padding: 0.75rem 1.5rem;
     font-size: ${(props) => props.theme.fontSize.xs};
     font-family: ${(props) => props.theme.fontFamily.fontMono}
     line-height: 1;
@@ -114,8 +114,8 @@ const mixins = {
   bigButton: css`
     color: ${(props) => props.theme.brand.primary};
     background-color: transparent;
-    border: 1px solid ${(props) => props.theme.brand.primary};
-    border-radius: ${(props) => props.theme.borderRadius};
+    border: 2px solid ${(props) => props.theme.brand.primary};
+    border-radius: ${(props) => props.theme.borderRadiusButton};
     padding: 1.25rem 1.75rem;
     font-size: ${(props) => props.theme.fontSize.sm};
     font-family: ${(props) => props.theme.fontFamily.fontMono};
