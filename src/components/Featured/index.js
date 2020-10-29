@@ -1,12 +1,8 @@
 import { Icon } from '@components/Icons';
 import { NumberedHeading } from '@common/styles';
+import Image from 'next/image';
 import { featuredProjects } from '@config';
-import {
-  StyledProject,
-  StyledProjectImg,
-  StyledProjectLinks,
-  StyledProjectImgWrapper,
-} from './styles';
+import { StyledProject, StyledProjectLinks, StyledProjectImgWrapper } from './styles';
 
 const Featured = () => {
   return (
@@ -53,7 +49,7 @@ const Featured = () => {
                   <a href={external || github || '#'}>
                     <div className="img-wrapper">
                       <div className="img-cont" />
-                      <StyledProjectImg src={cover} alt={title} className="img" />
+                      <Image width={800} height={600} src={cover} alt={title} className="img" />
                     </div>
                   </a>
                 </StyledProjectImgWrapper>

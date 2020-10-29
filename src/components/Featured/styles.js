@@ -12,10 +12,6 @@ export const StyledProjectImgWrapper = styled.div`
   .img-wrapper {
     position: relative;
     overflow: hidden;
-    .img-cont {
-      width: 100%;
-      padding-bottom: 62.2857%;
-    }
     img {
       position: absolute;
       top: 0px;
@@ -24,6 +20,17 @@ export const StyledProjectImgWrapper = styled.div`
       height: 100%;
       object-fit: cover;
       object-position: center center;
+      max-width: 100%;
+      border-radius: ${(props) => props.theme.borderRadius};
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1) brightness(90%);
+
+      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+        filter: grayscale(100%) contrast(1) brightness(80%);
+      }
     }
   }
 
