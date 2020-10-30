@@ -1,11 +1,22 @@
+/* eslint-disable global-require */
+import { useEffect, useRef } from 'react';
 import { NumberedHeading } from '@common/styles';
 import Image from 'next/image';
 import { skills } from '@config';
+import { srConfig } from '@config/sr';
 import { StyledAboutSection, StyledText, StyledPic } from './styles';
 
 const About = () => {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
-    <StyledAboutSection id="about">
+    <StyledAboutSection id="about" ref={revealContainer}>
       <NumberedHeading>About Me</NumberedHeading>
       <div className="inner">
         <StyledText>
