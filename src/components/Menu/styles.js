@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledMenu = styled.div`
   display: none;
-
   @media (max-width: 768px) {
     display: block;
   }
@@ -29,7 +28,7 @@ export const StyledHamburgerButton = styled.button`
   .ham-box {
     display: inline-block;
     position: relative;
-    width: var(--hamburger-width);
+    width: ${(props) => props.theme.hamburgerWidth};
     height: 24px;
   }
 
@@ -37,10 +36,10 @@ export const StyledHamburgerButton = styled.button`
     position: absolute;
     top: 50%;
     right: 0;
-    width: var(--hamburger-width);
+    width: ${(props) => props.theme.hamburgerWidth};
     height: 2px;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
+    border-radius: ${(props) => props.theme.borderRadius};
+    background-color: ${(props) => props.theme.brand.primary};
     transition-duration: 0.22s;
     transition-property: transform;
     transition-delay: ${(props) => (props.menuOpen ? `0.12s` : `0s`)};
@@ -55,26 +54,27 @@ export const StyledHamburgerButton = styled.button`
       position: absolute;
       left: auto;
       right: 0;
-      width: var(--hamburger-width);
+      width: ${(props) => props.theme.hamburgerWidth};
       height: 2px;
       border-radius: 4px;
-      background-color: var(--green);
+      background-color: ${(props) => props.theme.brand.primary};
       transition-timing-function: ease;
       transition-duration: 0.15s;
       transition-property: transform;
     }
     &:before {
-      width: ${(props) => (props.menuOpen ? `100%` : `120%`)};
+      width: ${(props) => (props.menuOpen ? `100%` : `80%`)};
       top: ${(props) => (props.menuOpen ? `0` : `-10px`)};
       opacity: ${(props) => (props.menuOpen ? 0 : 1)};
-      transition: ${({ menuOpen }) =>
-        menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
+      transition: ${({ menuOpen, theme }) =>
+        menuOpen ? theme.transitions.hamBeforeActive : theme.transitions.hamBefore};
     }
     &:after {
       width: ${(props) => (props.menuOpen ? `100%` : `80%`)};
       bottom: ${(props) => (props.menuOpen ? `0` : `-10px`)};
       transform: rotate(${(props) => (props.menuOpen ? `-90deg` : `0`)});
-      transition: ${({ menuOpen }) => (menuOpen ? 'var(--ham-after-active)' : 'var(--ham-after)')};
+      transition: ${({ menuOpen, theme }) =>
+        menuOpen ? theme.transitions.hamAfterActive : theme.transitions.hamAfter};
     }
   }
 `;
@@ -92,45 +92,49 @@ export const StyledSidebar = styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--light-navy);
-    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    background-color: ${(props) => props.theme.bg.defaultLight};
+    box-shadow: ${(props) => props.theme.shadows.default};
     z-index: 9;
     transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
     visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
-    transition: var(--transition);
-  }
+    transition: ${(props) => props.theme.transitions.default};
 
-  nav {
-    ${({ theme }) => theme.mixins.flexBetween};
-    width: 100%;
-    flex-direction: column;
-    color: var(--lightest-slate);
-    font-family: var(--font-mono);
-    text-align: center;
-  }
+    nav {
+      ${({ theme }) => theme.mixins.flexBetween};
+      width: 100%;
+      flex-direction: column;
+      color: ${(props) => props.theme.text.accent};
+      font-family: ${(props) => props.theme.fontFamily.fontMono};
+      text-align: center;
+    }
 
-  ol {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
+    ol {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      width: 100%;
 
-    li {
-      position: relative;
-      margin: 0 auto 20px;
-      counter-increment: item 1;
-      font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+      li {
+        position: relative;
+        margin: 0 auto 20px;
+        counter-increment: item 1;
+        font-size: clamp(
+          ${(props) => props.theme.fontSize.sm},
+          4vw,
+          ${(props) => props.theme.fontSize.lg}
+        );
+
+        &:before {
+          content: '0' counter(item) '.';
+          display: block;
+          margin-bottom: 5px;
+          color: ${(props) => props.theme.brand.primary};
+          font-size: ${(props) => props.theme.fontSize.xs};
+        }
+      }
 
       @media (max-width: 600px) {
         margin: 0 auto 10px;
-      }
-
-      &:before {
-        content: '0' counter(item) '.';
-        display: block;
-        margin-bottom: 5px;
-        color: var(--green);
-        font-size: var(--fz-sm);
       }
     }
 

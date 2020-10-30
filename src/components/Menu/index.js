@@ -83,6 +83,10 @@ const Menu = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.className = menuOpen && 'blur';
+  }, [menuOpen]);
+
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 

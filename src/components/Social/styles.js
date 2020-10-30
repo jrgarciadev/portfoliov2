@@ -8,15 +8,6 @@ export const StyledSocialList = styled.ul`
   padding: 0;
   list-style: none;
 
-  &:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0 auto;
-    background-color: ${(props) => props.theme.bg.reverse};
-  }
-
   li {
     padding: 10px;
     transition: ${(props) => props.theme.transitions.default};

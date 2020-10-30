@@ -58,10 +58,30 @@ export default createGlobalStyle`
     box-sizing: border-box;
     background-color: ${(props) => props.theme.bg.default};
     width: 100%;
-    height: 100%;   
+    height: 100%;
     font-weight: 400;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
+
+    &.hidden {
+      overflow: hidden;
+    }
+
+    &.blur {
+      overflow: hidden;
+
+      header {
+        background-color: transparent;
+      }
+
+      #content > * {
+        filter: blur(5px) brightness(0.7);
+        transition: ${(props) => props.theme.transitions.defualt}; 
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+
   }
 
   #root {

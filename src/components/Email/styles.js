@@ -6,15 +6,6 @@ export const StyledLinkWrapper = styled.div`
   align-items: center;
   position: relative;
 
-  &:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0 auto;
-    background-color: ${(props) => props.theme.bg.reverse};
-  }
-
   a {
     margin: 20px auto;
     padding: 10px;
@@ -25,6 +16,7 @@ export const StyledLinkWrapper = styled.div`
     transition: ${(props) => props.theme.transitions.default};
     &:hover,
     &:focus {
+      color: ${(props) => props.theme.brand.primary};
       transform: translateY(-3px);
     }
   }
