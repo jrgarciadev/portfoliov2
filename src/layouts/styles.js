@@ -68,3 +68,77 @@ export const SkipToContentLink = styled.a`
     z-index: 99;
   }
 `;
+
+export const StyledFooter = styled.footer`
+  ${({ theme }) => theme.mixins.flexCenter};
+  flex-direction: column;
+  height: auto;
+  min-height: 70px;
+  padding: 15px;
+  text-align: center;
+`;
+
+export const StyledSocialLinks = styled.div`
+  display: none;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    display: block;
+    width: 100%;
+    max-width: 270px;
+    margin: 0 auto 10px;
+    color: ${(props) => props.theme.text.accent};
+  }
+
+  ul {
+    ${({ theme }) => theme.mixins.flexBetween};
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    a {
+      padding: 10px;
+      svg {
+        fill: ${(props) => props.theme.text.accent};
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+`;
+
+export const StyledMadeWith = styled.div`
+  p {
+    color: ${(props) => props.theme.text.accent};
+    font-family: ${(props) => props.theme.fontFamily.fontMono};
+    font-size: ${(props) => props.theme.fontSize.sm};
+    line-height: 1;
+  }
+`;
+
+export const StyledCredit = styled.div`
+  color: ${(props) => props.theme.text.accent};
+  font-family: ${(props) => props.theme.fontFamily.fontMono};
+  font-size: ${(props) => props.theme.fontSize.xxs};
+  line-height: 1;
+
+  a {
+    font-size: ${(props) => props.theme.fontSize.xxs};
+    padding: 10px;
+  }
+
+  .github-stats {
+    margin-top: 10px;
+
+    & > span {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 7px;
+    }
+    svg {
+      display: inline-block;
+      width: auto;
+      height: 15px;
+      margin-right: 5px;
+    }
+  }
+`;

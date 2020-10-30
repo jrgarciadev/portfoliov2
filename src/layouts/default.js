@@ -6,6 +6,7 @@ import { SkipToContentLink } from './styles';
 import Main from './main';
 import BaseLayout from './base';
 import Navbar from './navbar';
+import Footer from './footer';
 
 const DefaultLayout = ({ children }) => {
   const router = useRouter();
@@ -45,6 +46,7 @@ const DefaultLayout = ({ children }) => {
             <Main id="content" className={isHome ? 'fillHeight' : ''}>
               {children}
             </Main>
+            <Footer />
           </>
         )}
       </>
