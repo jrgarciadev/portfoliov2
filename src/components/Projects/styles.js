@@ -5,6 +5,10 @@ export const StyledProjectsSection = styled.section`
   flex-direction: column;
   align-items: center;
 
+  .title-container {
+    text-align: center;
+  }
+
   h2 {
     font-size: clamp(24px, 5vw, ${(props) => props.theme.fontSize.xxl});
     font-weight: ${(props) => props.theme.fontw.semibold};

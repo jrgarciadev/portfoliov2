@@ -1,26 +1,40 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { useState, useRef } from 'react';
+/* eslint-disable global-require */
+/* eslint-disable no-return-assign */
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Icon } from '@components/Icons';
 import { projects } from '@config';
+import { srConfig } from '@config/sr';
 import { PROJECTS_GRID_LIMIT } from '@lib/constants';
 import { StyledProject, StyledProjectsSection } from './styles';
 
 const Projects = () => {
   const [showMore, setShowMore] = useState(false);
-  const revealTitle = useRef(null);
   const firstSix = projects.slice(0, PROJECTS_GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
 
+  const revealTitle = useRef(null);
+  const revealArchiveLink = useRef(null);
+  const revealProjects = useRef([]);
+
+  useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
+    sr.reveal(revealTitle.current, srConfig());
+    sr.reveal(revealArchiveLink.current, srConfig());
+    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+  }, []);
+
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Projects</h2>
-
-      <Link href="/archive">
-        <a className="archive-link inline-link">View all projects</a>
-      </Link>
-
+      <div className="title-container" ref={revealTitle}>
+        <h2>Other Projects</h2>
+        <Link href="/archive">
+          <a className="archive-link inline-link">View all projects</a>
+        </Link>
+      </div>
       <TransitionGroup className="projects-grid">
         {projectsToShow &&
           projectsToShow.map((project, i) => {
@@ -35,6 +49,7 @@ const Projects = () => {
               >
                 <StyledProject
                   key={title}
+                  ref={(el) => (revealProjects.current[i] = el)}
                   tabIndex="0"
                   style={{
                     transitionDelay: `${

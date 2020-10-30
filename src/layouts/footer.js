@@ -1,11 +1,21 @@
+/* eslint-disable global-require */
+import { useEffect, useRef } from 'react';
 import { Icon } from '@components/Icons';
 import { socialMedia } from '@config';
+import { srConfig } from '@config/sr';
 import Image from 'next/image';
 import { StyledFooter, StyledSocialLinks, StyledMadeWith, StyledCredit } from './styles';
 
 const Footer = () => {
+  const revealContainer = useRef(null);
+  useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
-    <StyledFooter>
+    <StyledFooter ref={revealContainer}>
       <StyledSocialLinks>
         <ul>
           {socialMedia &&
