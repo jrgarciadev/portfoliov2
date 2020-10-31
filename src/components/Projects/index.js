@@ -2,12 +2,12 @@
 /* eslint-disable global-require */
 /* eslint-disable no-return-assign */
 import { useEffect, useState, useRef } from 'react';
-import Link from 'next/link';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Icon } from '@components/Icons';
 import { projects } from '@config';
 import { srConfig } from '@config/sr';
-import { PROJECTS_GRID_LIMIT } from '@lib/constants';
+import { PROJECTS_GRID_LIMIT, IS_PRODUCTION } from '@lib/constants';
+import * as gtag from '@lib/gtag';
 import { StyledProject, StyledProjectsSection } from './styles';
 
 const Projects = () => {
@@ -26,6 +26,13 @@ const Projects = () => {
     sr.reveal(revealArchiveLink.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
+
+  const handleClickProject = (link) => {
+    if (IS_PRODUCTION) {
+      gtag.event('click_project', 'projects', 'user clicked on project link button', link);
+    }
+    window.open(link, '_blank');
+  };
 
   return (
     <StyledProjectsSection>
@@ -65,20 +72,13 @@ const Projects = () => {
                         </div>
                         <div className="project-links">
                           {github && (
-                            <a
-                              rel="noreferrer"
-                              target="_blank"
-                              href={github}
-                              aria-label="GitHub Link"
-                            >
+                            <a onClick={() => handleClickProject(github)} aria-label="GitHub Link">
                               <Icon name="GitHub" />
                             </a>
                           )}
                           {external && (
                             <a
-                              rel="noreferrer"
-                              target="_blank"
-                              href={external}
+                              onClick={() => handleClickProject(external)}
                               aria-label="External Link"
                             >
                               <Icon name="External" />

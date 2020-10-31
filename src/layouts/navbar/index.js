@@ -3,10 +3,11 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { navLinks } from '@config';
-import { LOADER_DELAY } from '@lib/constants';
+import { LOADER_DELAY, IS_PRODUCTION } from '@lib/constants';
 import { useScrollDirection } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/Icons';
+import * as gtag from '@lib/gtag';
 import { StyledHeader, StyledNav, StyledLinks } from './styles';
 
 const Nav = ({ isHome }) => {
@@ -34,6 +35,13 @@ const Nav = ({ isHome }) => {
   const timeout = isHome ? LOADER_DELAY : 0;
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
+
+  const handleClickResume = () => {
+    if (IS_PRODUCTION) {
+      gtag.event('click_resume', 'resume', 'user clicked on resume button', 'true');
+    }
+    window.open('/resume.pdf', '_blank');
+  };
 
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
@@ -77,7 +85,7 @@ const Nav = ({ isHome }) => {
             {isMounted && (
               <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                 <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                  <a rel="noreferrer" target="_blank" href="/resume.pdf" className="resume-button">
+                  <a onClick={handleClickResume} className="resume-button">
                     Resume
                   </a>
                 </div>
