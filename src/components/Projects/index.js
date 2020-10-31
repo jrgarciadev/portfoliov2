@@ -31,9 +31,9 @@ const Projects = () => {
     <StyledProjectsSection>
       <div className="title-container" ref={revealTitle}>
         <h2>Other Projects</h2>
-        <Link href="/archive">
+        {/*   <Link href="/archive">
           <a className="archive-link inline-link">View all projects</a>
-        </Link>
+        </Link> */}
       </div>
       <TransitionGroup className="projects-grid">
         {projectsToShow &&
@@ -65,12 +65,22 @@ const Projects = () => {
                         </div>
                         <div className="project-links">
                           {github && (
-                            <a href={github} aria-label="GitHub Link">
+                            <a
+                              rel="noreferrer"
+                              target="_blank"
+                              href={github}
+                              aria-label="GitHub Link"
+                            >
                               <Icon name="GitHub" />
                             </a>
                           )}
                           {external && (
-                            <a href={external} aria-label="External Link">
+                            <a
+                              rel="noreferrer"
+                              target="_blank"
+                              href={external}
+                              aria-label="External Link"
+                            >
                               <Icon name="External" />
                             </a>
                           )}
@@ -100,10 +110,11 @@ const Projects = () => {
             );
           })}
       </TransitionGroup>
-
-      <button type="button" className="more-button" onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
-      </button>
+      {projects && projects.length > 6 && (
+        <button type="button" className="more-button" onClick={() => setShowMore(!showMore)}>
+          Show {showMore ? 'Less' : 'More'}
+        </button>
+      )}
     </StyledProjectsSection>
   );
 };

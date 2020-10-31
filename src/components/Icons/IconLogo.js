@@ -2,7 +2,7 @@
 import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const IconLogo = ({ theme, width = 106.581, height = 120.186, ...props }) => {
+const IconLogo = ({ theme, width = 36.581, height = 50.186, ...props }) => {
   return (
     <svg width={width} height={height} viewBox="0 0 106.581 120.186" {...props}>
       <g fill={theme.brand.primary}>

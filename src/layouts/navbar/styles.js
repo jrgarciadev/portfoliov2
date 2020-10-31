@@ -57,7 +57,7 @@ export const StyledNav = styled.nav`
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
-
+    cursor: pointer;
     a {
       color: ${(props) => props.theme.text.default};
       width: 42px;

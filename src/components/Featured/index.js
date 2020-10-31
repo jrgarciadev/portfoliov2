@@ -51,12 +51,17 @@ const Featured = () => {
 
                   <StyledProjectLinks>
                     {github && (
-                      <a href={github} aria-label="GitHub Link">
+                      <a rel="noreferrer" target="_blank" href={github} aria-label="GitHub Link">
                         <Icon name="GitHub" />
                       </a>
                     )}
                     {external && (
-                      <a href={external} aria-label="External Link">
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href={external}
+                        aria-label="External Link"
+                      >
                         <Icon name="External" />
                       </a>
                     )}

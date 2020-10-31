@@ -222,7 +222,7 @@ export const StyledProject = styled.div`
       margin: 0 20px 5px 0;
       color: ${({ theme }) => theme.text.accent};
       font-family: ${({ theme }) => theme.fontFamily.fontMono};
-      font-size: ${({ theme }) => theme.fontSize.xs};
+      font-size: ${({ theme }) => theme.fontSize.sm};
       white-space: nowrap;
     }
 
