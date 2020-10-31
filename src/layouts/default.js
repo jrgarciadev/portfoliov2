@@ -18,6 +18,9 @@ const DefaultLayout = ({ children }) => {
     if (isLoading || !isBrowser) {
       return;
     }
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]');
+
     if (window.location.hash) {
       const id = window.location.hash.substring(1); // location.hash without the '#'
       setTimeout(() => {
