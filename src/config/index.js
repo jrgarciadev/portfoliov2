@@ -17,6 +17,7 @@ module.exports = {
     'Vue.js',
     'Node.js',
     'Laravel',
+    'Kotlin',
     'GraphQL',
   ],
 
