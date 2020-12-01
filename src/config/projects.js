@@ -14,7 +14,7 @@ module.exports = [
     github: 'https://github.com/jrgarciadev/nextjs-strapi-slider',
     descriptionHtml:
       'Web application to show modern slider, the slider images are managament from Strapi CMS Panel',
-    techs: ['Next.js', 'Strapi', 'GraphQL'],
+    techs: ['Next.js', 'Typescript', 'Strapi', 'GraphQL'],
   },
   {
     title: 'PWA Instagram for Pets',
@@ -27,7 +27,7 @@ module.exports = [
     title: 'Framework components for Vue.js',
     external: 'https://vuesax.com',
     github: 'https://github.com/jrgarciadev/vuesax',
-    descriptionHtml: 'I sometimes contributed to a Vue.js componented framework, Vuesax.',
+    descriptionHtml: 'I sometimes contributed to a Vue.js components framework, Vuesax.',
     techs: ['Vue.js', 'Javascript', 'LESS'],
   },
 ];

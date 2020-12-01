@@ -23,7 +23,7 @@ export const TransitionStyles = css`
     opacity: 0.01;
     transform: translateY(-20px);
     transition: opacity 300ms ${(props) => props.theme.transitions.easing},
-      transform 300ms ${(props) => props.theme.transitions.easing};
+      transform 300ms var(--easing);
   }
 
   .fadedown-enter-active {

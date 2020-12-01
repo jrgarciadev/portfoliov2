@@ -38,7 +38,11 @@ const Nav = ({ isHome }) => {
 
   const handleClickResume = () => {
     if (IS_PRODUCTION) {
-      gtag.event('click_resume', 'resume', 'user clicked on resume button', 'true');
+      gtag.event({
+        action: 'click_resume',
+        category: 'resume',
+        label: 'user clicked on resume button',
+      });
     }
     window.open('/resume.pdf', '_blank');
   };

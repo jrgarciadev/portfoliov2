@@ -46,6 +46,10 @@ module.exports = {
       url: '/#about',
     },
     {
+      name: 'Blog',
+      url: 'https://blog.jrgarciadev.com',
+    },
+    {
       name: 'Work',
       url: '/#projects',
     },
