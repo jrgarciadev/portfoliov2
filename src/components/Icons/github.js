@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const IconGitHub = () => (
   <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 438.549 438.549">
     <title>GitHub</title>
