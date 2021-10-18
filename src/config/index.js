@@ -4,23 +4,9 @@ import projects from './projects';
 
 module.exports = {
   email: 'jrgarciadev@gmail.com',
-
   featuredProjects,
   projects,
-
-  skills: [
-    'JavaScript (ES6+)',
-    'React Native',
-    'Android',
-    'React',
-    'Next.js',
-    'Vue.js',
-    'Node.js',
-    'Laravel',
-    'Kotlin',
-    'GraphQL',
-  ],
-
+  skills: ['JavaScript', 'TypeScript', 'React Native', 'React', 'Next.js', 'GraphQL'],
   socialMedia: [
     {
       name: 'GitHub',
@@ -28,7 +14,7 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/junior-garcia-558713160',
+      url: 'https://www.linkedin.com/in/jrgarciadev/',
     },
     {
       name: 'Instagram',
@@ -58,7 +44,6 @@ module.exports = {
       url: '/#contact',
     },
   ],
-
   colors: {
     green: '#64ffda',
     navy: '#0a192f',

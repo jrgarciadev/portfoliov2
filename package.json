@@ -26,7 +26,7 @@
     "animejs": "^3.2.1",
     "graphql": "^15.3.0",
     "intersection-observer": "^0.11.0",
-    "next": "^10.0.0",
+    "next": "^11.1.2",
     "react": "17.0.0",
     "react-dom": "17.0.0",
     "react-transition-group": "^4.4.1",

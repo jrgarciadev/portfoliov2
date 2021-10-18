@@ -14,11 +14,11 @@ export const MainContainer = styled.main`
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     padding: 200px 100px;
   }
-   
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     padding: 150px 50px;
   }
-   
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 125px 25px;
   }
@@ -35,7 +35,6 @@ export const MainContainer = styled.main`
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
       padding: 0 25px;
     }
-  }
   }
 `;
 

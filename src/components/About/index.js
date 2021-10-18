@@ -38,7 +38,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Image width={300} height={300} src="/avatar.png" alt="Avatar" className="img" />
+            <Image width={300} height={300} blu src="/avatar.jpeg" alt="Avatar" className="img" />
           </div>
         </StyledPic>
       </div>

@@ -66,35 +66,22 @@ export const StyledPic = styled.div`
     display: block;
     position: relative;
     width: 100%;
-    transition: ${(props) => props.theme.transitions.default};
     border-radius: ${(props) => props.theme.borderRadius};
-    background-color: ${(props) => props.theme.brand.primary};
     &:hover,
     &:focus {
       background: transparent;
       outline: 0;
-
       &:after {
         top: 15px;
         left: 15px;
       }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
     }
-
     .img {
       object-fit: cover;
       max-width: 100%;
       position: relative;
       border-radius: ${(props) => props.theme.borderRadius};
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: ${(props) => props.theme.transitions.default};
     }
-
     &:before,
     &:after {
       content: '';

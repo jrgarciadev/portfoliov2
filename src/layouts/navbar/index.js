@@ -3,11 +3,11 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { navLinks } from '@config';
-import { LOADER_DELAY, IS_PRODUCTION } from '@lib/constants';
+import { LOADER_DELAY } from '@lib/constants';
 import { useScrollDirection } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/Icons';
-import * as gtag from '@lib/gtag';
+// import * as gtag from '@lib/gtag';
 import { StyledHeader, StyledNav, StyledLinks } from './styles';
 
 const Nav = ({ isHome }) => {
@@ -36,16 +36,16 @@ const Nav = ({ isHome }) => {
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
 
-  const handleClickResume = () => {
-    if (IS_PRODUCTION) {
-      gtag.event({
-        action: 'click_resume',
-        category: 'resume',
-        label: 'user clicked on resume button',
-      });
-    }
-    window.open('/resume.pdf', '_blank');
-  };
+  //   const handleClickResume = () => {
+  //     if (IS_PRODUCTION) {
+  //       gtag.event({
+  //         action: 'click_resume',
+  //         category: 'resume',
+  //         label: 'user clicked on resume button',
+  //       });
+  //     }
+  //     window.open('/resume.pdf', '_blank');
+  //   };
 
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
@@ -85,7 +85,7 @@ const Nav = ({ isHome }) => {
             </TransitionGroup>
           </ol>
 
-          <TransitionGroup component={null}>
+          {/* <TransitionGroup component={null}>
             {isMounted && (
               <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                 <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
@@ -95,7 +95,7 @@ const Nav = ({ isHome }) => {
                 </div>
               </CSSTransition>
             )}
-          </TransitionGroup>
+          </TransitionGroup> */}
         </StyledLinks>
 
         <TransitionGroup component={null}>

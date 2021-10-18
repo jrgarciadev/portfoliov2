@@ -43,8 +43,8 @@ const BaseLayout = ({ children }) => {
           name="keywords"
           content="Developer, Javascript, Freelancer, React, React native, PHP, Laravel Developer, Vue JS Developer, React Developer"
         />
-        <meta property="og:image" content="https://jrgarciadev.com/avatar.png" />
-        <meta property="twitter:image" content="https://jrgarciadev.com/avatar.png" />
+        <meta property="og:image" content="https://jrgarciadev.com/avatar.jpeg" />
+        <meta property="twitter:image" content="https://jrgarciadev.com/avatar.jpeg" />
       </Head>
       {children}
     </div>

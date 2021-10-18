@@ -1,7 +1,7 @@
 import mixins from '@styles/mixins';
 
 export default {
-  borderRadius: '0.375rem',
+  borderRadius: '12px',
   borderRadiusButton: '2.375rem',
   hamburgerWidth: '3rem',
   fontFamily: {
@@ -9,8 +9,8 @@ export default {
     fontMono: 'Space Mono, SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
   },
   brand: {
-    primary: '#00D8FD',
-    secondary: '#3E5FA8',
+    primary: '#0693E3',
+    secondary: '#0693E3',
     accent: '#5FC921',
   },
   fontSize: {

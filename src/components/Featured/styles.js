@@ -37,33 +37,7 @@ export const StyledProjectImgWrapper = styled.div`
     background-color: ${(props) => props.theme.brand.primary};
     border-radius: ${(props) => props.theme.borderRadius};
     vertical-align: middle;
-
-    &:hover,
-    &:focus {
-      background: transparent;
-
-      &:before,
-      .img {
-        background: transparent;
-        filter: none;
-      }
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 3;
-      border-radius: ${(props) => props.theme.borderRadius};
-      transition: ${(props) => props.theme.transitions.default};
-      background-color: ${(props) => props.theme.bg.default};
-      mix-blend-mode: screen;
-    }
+    background: transparent;
   }
 `;
 
@@ -242,13 +216,9 @@ export const StyledProjectImage = styled.img`
   object-position: center center;
   max-width: 100%;
   border-radius: ${(props) => props.theme.borderRadius};
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(90%);
-
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     object-fit: cover;
     width: auto;
     height: 100%;
-    filter: grayscale(100%) contrast(1) brightness(80%);
   }
 `;
