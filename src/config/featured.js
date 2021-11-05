@@ -12,8 +12,8 @@ module.exports = [
   {
     title: 'Devcover',
     cover: '/devcover.jpg',
-    github: 'https://github.com/nextui-org/nextui',
-    external: 'https://nextui.org',
+    github: 'https://github.com/jrgarciadev/dev-cover',
+    external: 'https://devcover.me',
     descriptionHtml:
       'I won the <a target="_blank" rel="noreferrer" href="https://vercel.com">Vercel</a> & <a target="_blank" rel="noreferrer" href="https://hashnode.com">Hashnode</a> <a target="_blank" rel="noreferrer" href="https://townhall.hashnode.com/vercelhashnode-hackathon-winners">Hackaton</a> with this project which is the easiest way to generate a developer portfolio. Devcover collects the developer data from Github, Hashnode and Dev.to sites to build a great porfolio just with their Github username <a target="_blank" rel="noreferrer" href="https://blog.jrgarciadev.com/devcover-easiest-way-to-generate-a-developer-portfolio">Read blog</a> ',
     techs: ['React', 'Javascript', 'Vercel'],
