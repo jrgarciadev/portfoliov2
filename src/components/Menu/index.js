@@ -110,10 +110,10 @@ const Menu = () => {
                 ))}
               </ol>
             )}
-
+            {/* 
             <a href="/resume.pdf" className="resume-link">
               Resume
-            </a>
+            </a> */}
           </nav>
         </StyledSidebar>
       </div>
